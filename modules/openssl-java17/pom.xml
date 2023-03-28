@@ -78,11 +78,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>17</source>
-					<target>17</target>
-					<compilerArgs>
-						<arg>--add-modules</arg>
-						<arg>jdk.incubator.foreign</arg>
+					<source>16</source>
+					<target>16</target>
+					<compilerArgs>--enable-preview
+            <arg>jdk.incubator.foreign</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
@@ -90,14 +89,23 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<configuration>
-				    <source>17</source> 
+				    <source>17</source>
 					<additionalJOptions>
 						<additionalJOption>--add-modules</additionalJOption>
 						<additionalJOption>jdk.incubator.foreign</additionalJOption>
 					</additionalJOptions>
 				</configuration>
 			</plugin>
-		</plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>16</source>
+          <target>16</target>
+          <compilerArgs>--enable-preview</compilerArgs>
+        </configuration>
+      </plugin>
+    </plugins>
 	</build>
 
 </project>

@@ -31,7 +31,7 @@
     <version>0.1-SNAPSHOT</version>
 
     <properties>
-        <tomcat.version>11.0.0-M1-SNAPSHOT</tomcat.version>
+        <tomcat.version>10.1.5</tomcat.version>
     </properties>
 
     <scm>
@@ -88,7 +88,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<configuration>
-				    <source>19</source> 
+				    <source>19</source>
 					<additionalJOptions>
 						<additionalJOption>--enable-preview</additionalJOption>
 					</additionalJOptions>
